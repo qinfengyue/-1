@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>大作业2</title>
+    <style>
+        .a {
+            float: left;
+            width: 1330px;
+            height: 130px;
+        }
+
+        .a1 {
+            float: left;
+            width: 1330px;
+            height: 28px;
+        }
+
+        .a2 {
+            width: 1330px;
+            height: 80px;
+            float: left;
+        }
+
+        .a3 {
+            width: 1330px;
+            height: 27px;
+            float: left;
+        }
+
+        .b1 {
+            width: 1350px;
+            float: left;
+            height: 596px;
+            background-color: white;
+        }
+
+        .end {
+            width: 1330px;
+            height: 345px;
+            float: left;
+            background-color: #F6F5F4;
+        }
+
+        .b2 {
+            width: 1330px;
+            height: 550px;
+            float: left;
+            background-color: white;
+        }
+
+        .b3 {
+            width: 170px;
+            height: 550px;
+            float: left;
+            background-color: white;
+            margin-left: 85px;
+        }
+
+        .b4 {
+            width: 800px;
+            height: 365px;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .b5 {
+            width: 800px;
+            height: 187px;
+            float: left;
+        }
+
+        .b6 {
+            margin-top: -366px;
+            width: 215px;
+            height: 365px;
+            float: left;
+            background-color: white;
+            margin-left: 800px;
+        }
+
+        .b7 {
+            margin-top: 15px;
+            width: 208px;
+            height: 183px;
+            float: left;
+            margin-left: -1px;
+            background-color: white;
+        }
+
+        .b8 {
+            width: 25px;
+            height: 425px;
+            float: left;
+            background-color: #4c4c4A;
+        }
+
+        .b9 {
+            width: 145px;
+            height: 425px;
+            float: left;
+            background-color: white;
+        }
+
+        .b10 {
+            width: 212px;
+            height: 45px;
+            float: left;;
+            margin-left: 0px;
+            margin-top: -152px;
+            background-color: white;
+        }
+
+        .b11 {
+            width: 217px;
+            height: 280px;
+            float: left;
+            margin-left: 0px;
+            margin-top: -120px;
+            background-color: white;
+        }
+
+        #cover {
+            height: 120px;
+            background-color: white;
+            width: 100%;
+            border: 1px white solid;
+            z-index: 9999;
+            margin-top: -10px;
+        }
+
+        #container {
+            width: 215px;
+            height: 296px;
+            margin: 0 auto;
+            border: 0px solid red;
+            overflow: hidden;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            height: 35px;
+            line-height: 24px;
+            color: #FE6C00;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .box {
+            width: 780px;
+            height: 330px;
+            margin-left: 50px;
+            margin-top: 15px;
+        }
+
+        .inner {
+            width: 780px;
+            height: 330px;
+            position: relative;
+            overflow: hidden;
+            margin-top: -16px;
+            margin-left: -47px;
+        }
+
+        .inner img {
+            width: 780px;
+            height: 330px;
+
+        }
+
+        ul {
+            width: 1000%;
+            position: relative;
+            list-style: none;
+            left: 0;
+            top: 0;
+        }
+
+        .inner li {
+            float: left;
+        }
+
+        ol {
+            position: absolute;
+            height: 20px;
+            right: 20px;
+            bottom: 20px;
+            text-align: center;
+            padding: 0px;
+            margin-right: 300px;
+        }
+
+        ol li {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            background-color: white;
+            margin: 1px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-left: 8px;
+        }
+
+        li.current {
+            background-color: red;
+        }
+
+        #arr {
+            display: none;
+        }
+
+        #arr span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: red;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #000;
+            opacity: 0.5;
+            border: 1px solid #fff;
+        }
+
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }
+
+        #scroll-box {
+            width: 210px;
+            height: 310px;
+            overflow: hidden;
+        }
+
+        #scroll-box ul {
+            margin: 0
+        }
+
+        #scroll-box li {
+            color: red;
+            list-style: none;
+            font-size: 14px;
+            line-height: 20px;
+            height: 30px;
+            margin-left: -20px;
+        }
+        .bff{
+            background-color:#Ff9260;
+            position: absolute;
+            top: 128px;
+            right:160px;
+            height: 70px;
+            width: 45px;
+            border-top-left-radius: 50px;
+            background-image: url(./img/xiaobang.png);
+            background-position:0px 20px;
+            background-repeat: no-repeat;
+        }
+        .bf1{
+            background-color:#Ff9260;
+            position: absolute;
+            top: 200px;
+            right: 160px;
+            height: 140px;
+            width: 45px;
+            background-image: url(./img/youhui.png);
+            background-repeat: no-repeat;
+        }
+        .bf2{
+            position: absolute;
+            top: 342px;
+            right: 160px;
+            height: 150px;
+            width: 45px;
+            overflow: hidden;
+            background-color:#Ff9260;
+        }
+        .bf3{
+            background-color:#FE6C00;
+            position: absolute;
+            top: 495px;
+            right: 160px;
+            height: 140px;
+            width: 45px;
+            margin-left: 10px;
+            background-image: url(./img/cart.png);
+        }
+    </style>
+</head>
+<body>
+<div class="boxx" id="cover">
+    <div class="a">
+        <div class="a1">
+            <p style="color:#676660;float: left; width:100px;height: 14px;margin-left:85px;font-size: 12px; margin-top: 8px;">
+                帮5买，享帮帮</p>
+            <img style="float: left; margin-left: 350px;" src="./img/a1.png">
+            <p style="color:#676660;float: left; width:100px;height: 14px;margin-left:20px;font-size: 12px; margin-top: 8px;">
+                登录&nbsp &nbsp注册</p>
+            <img style="float: left; margin-left: 2px" src="./img/a3.png">
+            <p style="float: left; margin-top: 8px; font-size: 12px; color:#676660;">消息</p>
+            <img style="float: left; margin-left: 20px" src="./img/a4.png">
+            <p style="float: left; margin-top: 8px; font-size: 12px; color:#676660;">我的订单&nbsp&nbsp
+                &nbsp&nbsp我的收藏&nbsp&nbsp &nbsp&nbsp帮钻兑换</p>
+            <img style="float: left; margin-left: 20px" src="./img/a5.png">
+            <p style="float: left; margin-top: 8px; font-size: 12px; color:#676660;">手机版&nbsp&nbsp
+                &nbsp&nbsp帮五淘&nbsp&nbsp &nbsp&nbsp客户服务</p>
+            <img style="float: left; margin-left: 20px" src="./img/a6.png">
+            <p style="float: left; margin-top: 8px; font-size: 12px; color:#676660;">购物车</p>
+            <img style="float: left;margin-left:1072px; ;margin-top: 5px;" src="./img/abc5.png">
+        </div>
+        <div class="a2">
+            <img style="margin-left:85px ; float: left;" src="./img/logo_03.jpg">
+            <div style="width: 500px;height: 41px;float: left;margin-left: 80px;margin-top:10px;">
+                <input style="width: 500px;height: 40px;margin-left: 80px;border-color: #FE6C00;" type="" name=""
+                       placeholder=" 输入商品网址或关键字，直通全网，快速帮5购!">
+            </div>
+            <div style="float: left;background-color: #FE6C00;width: 85px;height: 45px; margin-left: 80px;margin-top: 10px;">
+                <p style="margin-top: 8px;float: left;margin-left: 14px; font-size: 19px;color: white; ">搜全网</p>
+            </div>
+        </div>
+        <div class="a3">
+            <p style="float: left;margin-left:340px ; color: red;font-size: 12px; margin-top: -3px;font-weight: 700;width: 150px;height: 27px;">
+                洗发护发&nbsp | &nbsp日本纸尿裤&nbsp |&nbsp</p>
+            <p style="float: left;margin-left:0px ;font-size: 12px; margin-top: -3px;font-weight: 700; ">身体乳&nbsp |
+                &nbsp内衣文胸&nbsp |&nbsp
+                iphons 6 &nbsp |&nbsp ipad Air2 &nbsp |&nbsp ipad &nbsp |&nbsp 牛仔裤 &nbsp |&nbsp 奶粉&nbsp |&nbsp防晒霜&nbsp
+                |&nbsp伞</p>
+        </div>
+    </div>
+</div>
+<div class="b1">
+    <div style="width: 170px;height: 40px;float: left;background-color:  #FF4D04;margin-left: 85px;">
+        <p style="float: left;margin-left:30px ;margin-top: 10px; color: white;">全部商品分类</p>
+    </div>
+    <p style="float: left;margin-left:45px ;margin-top:7px; ">帮5赚</p>
+    <p style="float: left;margin-left:55px ;margin-top:7px;">韩帮品</p>
+    <p style="float: left;margin-left:55px ;margin-top:7px;">超划算</p>
+    <p style="float: left;margin-left:55px ;margin-top:7px;">品牌货栈</p>
+    <p style="float: left;margin-left:55px ;margin-top:7px;">韩国馆</p>
+    <p style="float: left;margin-left:55px ;margin-top:7px;">帮社区</p>
+    <p style="float: left;margin-left:55px ;margin-top:7px;">1元兑奖</p>
+    <img style="margin-left: 980px;float: left;margin-top: -55px;" src="./img/hot.gif">
+    <div style="float:left; width: 1350px;height: 2px;background-color: #FE6C00;margin-top: -4px;"></div>
+    <div class="b2">
+        <div class="b3">
+            <div class="b8">
+                <p style="width:15px ;height: 15px;float: left;color: red;margin-top: 25px;margin-left:4px ;font-size: 15px; ;">
+                    当</p>
+                <p style="width:15px ;height: 15px;float: left;color: red;margin-top: -4px;margin-left:4px ;font-size: 15px; ;">
+                    前</p>
+                <p style="width:15px ;height: 15px;float: left;color: red;margin-top: -4px;margin-left:4px ;font-size: 15px; ;">
+                    搜</p>
+                <p style="width:15px ;height: 15px;float: left;color: red;margin-top: -4px;margin-left:4px ;font-size: 15px; ;">
+                    索</p>
+                <p style="width:15px ;height: 15px;float: left;color: red;margin-top: -4px;margin-left:4px ;font-size: 15px; ;">
+                    电</p>
+                <p style="width:15px ;height: 15px;float: left;color: red;margin-top: -4px;margin-left:4px ;font-size: 15px; ;">
+                    商</p>
+                <p style="width:15px ;height: 15px;float: left;color: red;margin-top: 10px;margin-left:4px ;font-size: 15px; ;">
+                    全</p>
+                <p style="width:15px ;height: 15px;float: left;color: red;margin-top: -4px;margin-left:4px ;font-size: 15px; ;">
+                    网</p>
+            </div>
+            <div class="b9">
+                <p style="font-size: 13px;float: left;margin-left:2px ;margin-top:15px ;width:130px;height: 15px;">
+                    手机&nbsp 数码&nbsp 影音&nbsp 配件</p>
+                <p style="font-size: 13px;float: left;margin-left:2px ;margin-top:3px ;width:130px;height: 15px;">
+                    电脑&nbsp 网络&nbsp 办公&nbsp 打印</p>
+                <p style="font-size: 13px;float: left;margin-left:2px ;margin-top:3px ;width:130px;height: 15px;">
+                    家电&nbsp 厨卫&nbsp 生活&nbsp 个户</p>
+                <p style="font-size: 13px;float: left;margin-left:2px ;margin-top:3px ;width:130px;height: 15px;">
+                    园艺&nbsp 家具&nbsp 家纺&nbsp 家饰</p>
+                <p style="font-size: 13px;float: left;margin-left:2px ;margin-top:3px ;width:130px;height: 15px;">
+                    彩妆&nbsp 面部&nbsp 身体&nbsp 香水</p>
+                <p style="font-size: 13px;float: left;margin-left:2px ;margin-top:3px ;width:130px;height: 15px;">
+                    男装&nbsp 女装&nbsp 内衣&nbsp 其他</p>
+                <p style="font-size: 13px;float: left;margin-left:2px ;margin-top:3px ;width:130px;height: 15px;">
+                    女包&nbsp 男包&nbsp 女鞋&nbsp 男鞋</p>
+                <p style="font-size: 13px;float: left;margin-left:2px ;margin-top:3px ;width:130px;height: 15px;">
+                    运动&nbsp 户外&nbsp 装饰&nbsp 服饰</p>
+                <p style="font-size: 13px;float: left;margin-left:2px ;margin-top:3px ;width:130px;height: 15px;">
+                    儿童&nbsp 婴儿&nbsp 食品&nbsp 玩具</p>
+                <p style="font-size: 13px;float: left;margin-left:2px ;margin-top:3px ;width:130px;height: 15px;">
+                    乐器&nbsp 家宠&nbsp 收藏&nbsp 鲜花</p>
+                <p style="font-size: 13px;float: left;margin-left:2px ;margin-top:3px ;width:130px;height: 15px;">
+                    保健&nbsp 理疗&nbsp 药品&nbsp 眼镜</p>
+                <p style="font-size: 13px;float: left;margin-left:2px ;margin-top:3px ;width:130px;height: 15px;">
+                    果蔬&nbsp 礼品&nbsp 粮油&nbsp 特产</p>
+                <p style="font-size: 13px;float: left;margin-left:2px ;margin-top:3px ;width:130px;height: 15px;">
+                    文艺&nbsp 生活&nbsp 科技&nbsp 教育</p>
+            </div>
+            <img style="float: left;width:27px ;height:27px ;margin-top: 10px;margin-left: 10px; ;"
+                 src="./img/dd_03.jpg">
+            <p style="float: left;font-size: 13px; margin-left: 7px;color: #676660 ;width:120px ;height:20px ;">
+                什么是帮5购 </p>
+            <img style="float: left;width: 27px;height:27px ;margin-top: 10px;margin-left: 10px ;"
+                 src="./img/dd_06.jpg">
+            <p style="float: left;font-size: 13px; margin-left: 7px;color: #676660 ;width:125px ;height:20px;margin-top: 13px; ">
+                帮5购提供什么服务 </p>
+            <img style="float: left;width: 27px;height:27px ; margin-top:7px ;margin-left: 7px;" src="./img/dd_08.jpg">
+            <p style="float: left;font-size: 13px; margin-left: 45px;color: #676660 ;width:125px ;height:20px ;margin-top: -25px;">
+                如何开通帮5购服务 </p>
+        </div>
+
+        <div class="b4">
+            <div id="box" class="box">
+                <div class="inner">
+                    <ul class="lun">
+                        <li><a href="#"><img src="img/bann1.jpeg" alt=""></a></li>
+                        <li><a href="#"><img src="img/bann2.jpeg" alt=""></a></li>
+                        <li><a href="#"><img src="img/bann3.jpeg" alt=""></a></li>
+                        <li><a href="#"><img src="img/bann4.jpeg" alt=""></a></li>
+                        <li><a href="#"><img src="img/bann5.jpeg" alt=""></a></li>
+                        <li><a href="#"><img src="img/bann6.png" alt=""></a></li>
+                    </ul>
+                    <ol class="bar"></ol>
+                    <div id="arr">
+                        <span id="left"><</span>
+                        <span id="right">></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="b5">
+                <img style="float:  left;margin-top: 2px;" src="./img/1(1).jpg">
+                <img style="float: left;margin-top: 2px;" src="./img/2.jpg">
+                <img style="float: left;margin-top: 2px;" src="./img/3(1).png">
+                <img style="float: left;margin-top: 2px;" src="./img/qqq.png">
+            </div>
+            <div class="b6">
+                <div class="b10">
+                    <img style="float: left;margin-left: 22px;margin-top: 18px;" src="./img/ico-notice.png">
+                    <p style="float: left;width:62px ;height:17px ;margin-left: 10px;margin-top:14px ;font-size: 15px; color: #FE6C00;font-weight: 700;">
+                        帮帮快讯</p>
+                    <img style="float: left;margin-left: 70px;margin-top: 18px;" src="./img/jiantou.jpg">
+                </div>
+                <div class="b11">
+                    <div id="container">
+                        <ul id="con1">
+                            <li>【公告】 帮购及VIP服务调整1</li>
+                            <li>【公告】 帮购及VIP服务调整2</li>
+                            <li>【公告】 帮购及VIP服务调整3</li>
+                            <li>【公告】 帮购及VIP服务调整4</li>
+                            <li>【公告】 帮购及VIP服务调整5</li>
+                            <li>【公告】 帮购及VIP服务调整6</li>
+                            <li>【公告】 帮购及VIP服务调整7</li>
+                            <li>【公告】 帮购及VIP服务调整8</li>
+                            <li>【公告】 帮购及VIP服务调整9</li>
+                            <li>【公告】 帮购及VIP服务调整10</li>
+                            <li>【公告】 帮购及VIP服务调整11</li>
+                            <li>【公告】 帮购及VIP服务调整12</li>
+                            <li>【公告】 帮购及VIP服务调整13</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="ann" class="b7">
+                    <img style="float: left;margin-left: 17px;margin-top:8px ;" src="./img/a5.png">
+                    <p style="float: left;margin-top: 10px;margin-left: 10px;font-size: 13px;width: 60px;">话费充值</p>
+                    <p style="float: left;margin-top: 10px;margin-left: 2px;font-size: 11px;color: red;width: 100px;">
+                        (可以使用超级帮钻)</p>
+                    <input style="border-width: 1px;border-color: #676660; width: 125px;height: 25px;margin-left: 17px;"
+                           type="" name="" placeholder=" 请输入手机号">
+                    <select id="tag" style="float: left;width:60px ;height: 15px; margin-top: 10px; margin-left: 17px"
+                            onchange="f()">
+                        <option value=10>10</option>
+                        <option value=30>30</option>
+                        <option value=50>50</option>
+                        <option value=100>100</option>
+                    </select>
+                    <p style="color: red;float: left;margin-left: 10px;margin-top: 5px;">¥</p>
+                    <p id="tag1"
+                       style="float: left;margin-top: 5px;margin-left: 5px; width: 50px;height: 20px;color: red;">10</p>
+                    <div style="float: left; width: 180px;height: 25px;margin-top: 2px;margin-left: 17px;background-color: red;border-radius: 5px;">
+                        <p style="float: left;margin-left: 75px;margin-top: 2px;color: white;font-weight: 800;">充值</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <img style="float:left;width:146px;height:186px;margin-left: 85px;margin-top: 0px;" src="./img/loginB.jpg">
+            <div style="width: 860px;height: 180px;float:left;">
+                <p style="float:left;margin-top: 20px;margin-left: 85px; font-size: 18px;">购物指南&nbsp &nbsp&nbsp&nbsp
+                    &nbsp &nbsp&nbsp &nbsp支付相关
+                    &nbsp &nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp售后服务&nbsp &nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp
+                    vip服务&nbsp &nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp
+                    帮韩品&nbsp &nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp更多 </p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 85px;width:65px;height: 23px;">
+                    如何下单</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 75px;width:65px;height: 23px;">
+                    支付方式</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 75px;width:65px;height: 23px;">
+                    取消订单</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 75px;width:65px;height: 23px;">
+                    vip优惠</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 65px;width:65px;height: 23px;">
+                    韩国正品</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 55px;width:65px;height: 23px;">
+                    手机App</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 85px;width:75px;height: 23px;">
+                    帮五购流程</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 70px;width:65px;height: 23px;">
+                    安全设置</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 70px;width:65px;height: 23px;">
+                    申请售后</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 73px;width:75px;height: 23px;">
+                    如何成为vip</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 60px;width:65px;height: 23px;">
+                    闪电发货</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 50px;width:75px;height: 23px;">
+                    帮五采App</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 85px;width:65px;height: 23px;">
+                    订单查询</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 75px;width:65px;height: 23px;">
+                    账户信息</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 75px;width:65px;height: 23px;">
+                    退货流程</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 75px;width:65px;height: 23px;">
+                    超级帮钻</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 65px;width:75px;height: 23px;">
+                    棒韩品售后</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 43px;width:65px;height: 23px;">
+                    帮五淘插件</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 85px;width:65px;height: 23px;">
+                    物流配送</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 215px;width:65px;height: 23px;">
+                    退款相关</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 325px;width:65px;height: 23px;">
+                    其他</p>
+            </div>
+            <div class="bff" id="aaa" onmouseover="ff()" onmouseout="ff0()" style="position: fixed;"></div>
+            <div class="bf1" id="bbb" onmouseover="ff1()" onmouseout="ff2()" style="position: fixed;"></div>
+            <img style="float: left;margin-top: 20px;" src="./img/erweima.jpg">
+            <div style="height: 160px;width: 1330px;float:left;">
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 20px;margin-left:345px;">关于帮五买&nbsp
+                    &nbsp | &nbsp &nbsp联系我们
+                    &nbsp &nbsp | &nbsp &nbsp合作商家&nbsp &nbsp | &nbsp &nbsp友情链接&nbsp &nbsp | &nbsp &nbsp加入我们&nbsp &nbsp |
+                    &nbsp &nbsp移动应用
+                    &nbsp &nbsp | &nbsp &nbsp热门&nbsp &nbsp | &nbsp &nbsp广告联盟&nbsp &nbsp | &nbsp &nbsp使用条款</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left:450px;">Copyright ©
+                    2011-2015 B5M.COM All rights reserved.
+                    Powered by B5Msoft Co Ltd</p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left:140px;">
+                    增值电信业务经营许可证： 沪B2-20130065号中华人民共和国互联网药品信息服务资格证书 (沪) -非经营性-2013-0034 沪卫(中医)网审【2015】 10032号 沪ICP备
+                    11034776
+                    号-3 |食品流通许可证：
+                </p>
+                <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 610px;height: 23px; width: 500px;">
+                    sp 3101151410301755</p>
+                <div style="float:left;width: 800px;height: 61px;margin-left: 290px">
+                    <img style="float:left; margin-left:0px;" src="./img/bo1.gif">
+                    <img style="float:left; margin-bottom: 1px;" src="./img/bo2.png">
+                    <img style="float:left;margin-bottom: 1px;" src="./img/bo3.gif">
+                    <img style="float:left;margin-bottom: 1px;" src="./img/bo4.png">
+                    <img style="float:left;margin-bottom: 1px;" src="./img/bo5.png">
+                    <img style="float:left;margin-bottom: 1px;" src="./img/bo6.png">
+                    <img style="float:left;margin-bottom: 1px;" src="./img/bo7.png">
+                </div>
+            </div>
+        </div>
+        <div class="bf2" id="ccc" onmouseover="ff3()" onmouseout="ff4()" style="position: fixed;" >
+            <img src="./img/app.png">
+            <img style="margin-left: 10px;margin-top: 40px;" src="./img/serwei.png" >
+        </div>
+        <div class="bf3" id="ddd" onmouseover="ff5()" onmouseout="ff6()" style="position: fixed;"></div>
+        <script>
+            window.onload = function () {
+                var cover = document.getElementsByClassName('boxx')[0];
+                window.onscroll = function () {
+                    var st = document.documentElement.scrollTop || document.body.scrollTop;
+                    if (st > 120) {
+                        cover.style.position = "fixed";
+                    } else {
+                        cover.style.position = "static";
+                    }
+                }
+            };
+            var c = document.getElementById("container");
+            var con1 = document.getElementById("con1");
+            con1.innerHTML += con1.innerHTML;
+            var iHeight = 24;
+            var d = 1000;
+            var speed = 40;
+
+            function sTop() {
+                if (c.scrollTop % iHeight == 0) {
+                    clearInterval(timer);
+                    t = setTimeout(startMove, 0);
+                }
+                if (c.scrollTop >= con1.scrollHeight / 2) {
+                    c.scrollTop = 0;
+                    c.scrollTop = c.scrollTop - con1.scrollHeight / 2;
+                } else {
+                    c.scrollTop++;
+                }
+            }
+            function startMove() {
+                c.scrollTop++;
+                timer = setInterval(sTop, speed);
+            }
+            startMove();
+            c.onmouseover = function () {
+                clearInterval(timer);
+                clearTimeout(t);
+            };
+            c.onmouseout = function () {
+                timer = setInterval(sTop, speed);
+            }
+            function my$(id) {
+                return document.getElementById(id);
+            }
+            var box = my$("box");
+            var inner = box.children[0];
+            var ulObj = inner.children[0];
+            var list = ulObj.children;
+            var olObj = inner.children[1];
+            var arr = my$("arr");
+            var imgWidth = inner.offsetWidth;
+            var right = my$("right");
+            var pic = 0;
+            for (var i = 0; i < list.length; i++) {
+                var liObj = document.createElement("li");
+                olObj.appendChild(liObj);
+                liObj.innerText = (i + 1);
+                liObj.setAttribute("index", i);
+                liObj.onmouseover = function () {
+                    for (var j = 0; j < olObj.children.length; j++) {
+                        olObj.children[j].removeAttribute("class");
+                    }
+                    this.className = "current";
+                    pic = this.getAttribute("index");
+                    animate(ulObj, -pic * imgWidth);
+                }
+
+            }
+
+            olObj.children[0].className = "current";
+            ulObj.appendChild(ulObj.children[0].cloneNode(true));
+
+            var timeId = setInterval(onmouseclickHandle, 1500);
+            box.onmouseover = function () {
+                arr.style.display = "block";
+                clearInterval(timeId);
+            };
+            box.onmouseout = function () {
+                arr.style.display = "none";
+                timeId = setInterval(onmouseclickHandle, 1500);
+            };
+
+            right.onclick = onmouseclickHandle;
+
+            function onmouseclickHandle() {
+                if (pic == list.length - 1) {
+                    pic = 0;
+                    ulObj.style.left = 0 + "px";
+                }
+                pic++;
+                animate(ulObj, -pic * imgWidth);
+                if (pic == list.length - 1) {
+                    olObj.children[olObj.children.length - 1].className = "";
+                    olObj.children[0].className = "current";
+                } else {
+                    for (var i = 0; i < olObj.children.length; i++) {
+                        olObj.children[i].removeAttribute("class");
+                    }
+                    olObj.children[pic].className = "current";
+                }
+            }
+
+            left.onclick = function () {
+                if (pic == 0) {
+                    pic = list.length - 1;
+                    ulObj.style.left = -pic * imgWidth + "px";
+                }
+                pic--;
+                animate(ulObj, -pic * imgWidth);
+                for (var i = 0; i < olObj.children.length; i++) {
+                    olObj.children[i].removeAttribute("class");
+                }
+                olObj.children[pic].className = "current";
+            };
+
+            function animate(element, target) {
+                clearInterval(element.timeId);
+                element.timeId = setInterval(function () {
+                    var current = element.offsetLeft;
+                    var step = 10;
+                    step = current < target ? step : -step;
+                    current += step;
+                    if (Math.abs(current - target) > Math.abs(step)) {
+                        element.style.left = current + "px";
+                    } else {
+                        clearInterval(element.timeId);
+                        element.style.left = target + "px";
+                    }
+                }, 10);
+            }
+            function f() {
+                document.getElementById('tag1').innerText = document.getElementById('tag').value;
+            }
+            var n=45;
+            function ff(){
+                var a=setInterval(ft,50);
+                function ft(){
+                    if(document.getElementById('aaa').style.width<100){
+                        n+=5;
+                        document.getElementById('aaa').style.width=n+"px";
+                    }
+                    else{
+                        document.getElementById('aaa').style.width="100px";
+                        clearInterval(a);
+                        n=45;
+                    }
+                }
+            }
+            function ff0(){
+                document.getElementById('aaa').style.width="45px";
+            }
+            function ff1(){
+                var a=setInterval(ft1,50);
+                function ft1(){
+                    if(document.getElementById('bbb').style.width<100){
+                        n+=5;
+                        document.getElementById('bbb').style.width=n+"px";
+                    }
+                    else{
+                        document.getElementById('bbb').style.width="100px";
+                        clearInterval(a);
+                        n=45;
+                    }}
+            }
+            function ff2(){
+                document.getElementById('bbb').style.width="45px";
+            }
+            function ff3(){
+                var a=setInterval(ft1,50);
+                function ft1(){
+                    if(document.getElementById('ccc').style.width<100){
+                        n+=5;
+                        document.getElementById('ccc').style.width=n+"px";
+                    }
+                    else{
+                        document.getElementById('ccc').style.width="100px";
+                        clearInterval(a);
+                        n=45;
+                    }}
+            }
+            function ff4(){
+                document.getElementById('ccc').style.width="45px";
+            }
+            function ff5(){
+                var a=setInterval(ft1,50);
+                function ft1(){
+                    if(document.getElementById('ddd').style.width<100){
+                        n+=5;
+                        document.getElementById('ddd').style.width=n+"px";
+                    }
+                    else{
+                        document.getElementById('ddd').style.width="100px";
+                        clearInterval(a);
+                        n=45;
+                    }}
+            }
+            function ff6(){
+                document.getElementById('ddd').style.width="45px";
+            }
+        </script>
+</body>
+</html>

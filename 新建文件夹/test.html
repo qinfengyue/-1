@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>大作业1</title>
+    <style>
+        .a {
+            float: left;
+            width: 1330px;
+            height: 130px;
+        }
+
+        .a1 {
+            float: left;
+            width: 1330px;
+            height: 28px;
+        }
+
+        .a2 {
+            width: 1330px;
+            height: 80px;
+            float: left;
+        }
+
+        .a3 {
+            width: 1330px;
+            height: 27px;
+            float: left;
+        }
+
+        .b1 {
+            width: 1330px;
+            height: 40px;
+            float: left;
+            background-color: black;
+        }
+
+        .b2 {
+            width: 100px;
+            height: 40px;
+            float: left;
+            background-color: red;
+            margin-left: 85px;
+        }
+
+        .c1 {
+            width: 1330px;
+            height: 670px;
+            float: left;
+            background-color: #F6F5F4;
+        }
+
+        .c2 {
+            width: 1080px;
+            height: 670px;
+            float: left;
+        }
+        .list li {
+            font-size: 13px;
+            margin-left: -10px;
+            margin-top: 5px;
+        }
+        .h1 {
+            width: 1000px;
+            height: 635px;
+            float: left;
+        }
+
+        .bottom li {
+            font-size: 15px;
+            float: left;
+            list-style: none;
+            color: black;
+        }
+
+        .bottom li a {
+            text-decoration: none;
+            color: black;
+        }
+        .list li a {
+            text-decoration: none;
+            color: grey;
+        }
+        .c3 {
+            width: 184px;
+            height: 625px;
+            float: left;
+            margin-left: 1100px;
+            background-color: white;
+        }
+
+        .d1 {
+            width: 1330px;
+            height: 110px;
+            float: left;
+            background-color: #F6F5F4;
+        }
+
+        .d2 {
+            width: 1330px;
+            height: 35px;
+            float: left;
+            background-color: #F6F5F4;
+        }
+
+        .end {
+            width: 1330px;
+            height: 345px;
+            float: left;
+        }
+        #contain img {
+            width: 600px;
+            height: 600px;
+            position: relative;
+        }
+        #sancel {
+            width: 960px;
+            height: 490px;
+            float: left;
+            margin-left: 20px;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #sancel #line {
+            width: 408px;
+            height: 408px;
+            float: left;
+            position: relative;
+            border: 1px grey solid;
+        }
+
+        #contain {
+            width: 408px;
+            height: 408px;
+            position: absolute;
+            left: 409px;
+            overflow: hidden;
+            display: none;
+            border: 1px grey solid;
+        }
+
+        #cover {
+            height: 120px;
+            background-color: white;
+            width: 100%;
+            border: 1px white solid;
+            z-index: 9999;
+            margin-top: -10px;
+        }
+
+        #backcolorgrey {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            background-color: grey;
+            opacity: 0.6;
+            filter: alpha(opacity=40);
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+
+        #s1 {
+            width: 100%;
+            height: 2000px;
+            opacity: 0.8;
+            position: fixed;
+            top: 0px;
+            background-color: #dedcd8;
+
+
+        }
+        #nnn1 {
+            text-decoration: none;
+            color: white;
+        }
+
+        #shopboder {
+            width: 400px;
+            height: 220px;
+            border: 2px grey solid;
+            text-align: center;
+            background-color: white;
+            margin-left: 500px;
+            margin-top: 300px;
+
+        }
+
+        #chuwubox {
+            width: 20px;
+            height: 20px;
+            float: right;
+            font-size: 20px;
+            background-color: white;
+
+            line-height: 20px;
+        }
+
+        #plcen {
+            width: 150px;
+            height: 40px;
+            border: 1px red solid;
+            color: red;
+            font-size: 18px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            margin-left: 530px;
+            margin-top: -80px;
+        }
+
+        #tag10 {
+            width: 150px;
+            height: 41px;
+            border: 1px red solid;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            margin-left: 700px;
+            margin-top: -43px;
+            background-color: red;
+        }
+
+        #nnn12 {
+            text-decoration: none;
+            color: red;
+        }
+
+        #nnn13 {
+            text-decoration: none;
+            color: black;
+        }
+        .ann{
+            width: 250px;
+            height: 40px;
+            margin-top: -10px;
+        }
+        .ann1{
+            width: 90px;
+            font-size: 13px;
+            height: 100px;
+            margin-left: 20px;
+            float: left;
+        }
+        .h2{
+            color:orange;
+            font-size: 14px;
+            height:40px;
+            position:absolute;
+            line-height:15px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1" id="cover">
+    <div class="a">
+        <div class="a1">
+            <p style="color:#676660;float: left; width:100px;height: 14px;margin-left:85px;font-size: 12px; margin-top: 8px;">
+                帮5买，享帮帮</p>
+            <img style="float: left; margin-left: 350px;" src="./img/a1.png">
+            <p style="color:#676660;float: left; width:100px;height: 14px;margin-left:20px;font-size: 12px; margin-top: 8px;">
+                登录&nbsp &nbsp注册</p>
+            <img style="float: left; margin-left: 2px" src="./img/a3.png">
+            <p style="float: left; margin-top: 8px; font-size: 12px; color:#676660;">消息</p>
+            <img style="float: left; margin-left: 20px" src="./img/a4.png">
+            <p style="float: left; margin-top: 8px; font-size: 12px; color:#676660;">我的订单&nbsp&nbsp
+                &nbsp&nbsp我的收藏&nbsp&nbsp &nbsp&nbsp帮钻兑换</p>
+            <img style="float: left; margin-left: 20px" src="./img/a5.png">
+            <p style="float: left; margin-top: 8px; font-size: 12px; color:#676660;">手机版&nbsp&nbsp
+                &nbsp&nbsp帮五淘&nbsp&nbsp &nbsp&nbsp客户服务</p>
+            <img style="float: left; margin-left: 20px" src="./img/a6.png">
+            <p style="float: left; margin-top: 8px; font-size: 12px; color:#676660;">购物车</p>
+            <img style="float: left;margin-left:1072px; ;margin-top: 5px;" src="./img/abc5.png">
+        </div>
+        <div class="a2">
+            <img style="margin-left:85px ; float: left;" src="./img/logo_03.jpg">
+            <div style="width: 500px;height: 41px;float: left;margin-left: 80px;margin-top:10px;">
+                <input style="width: 500px;height: 40px;margin-left: 80px;border-color: #FE6C00;" type="" name=""
+                       placeholder=" 输入商品网址或关键字，直通全网，快速帮5购!">
+            </div>
+            <div style="float: left;background-color: #FE6C00;width: 85px;height: 45px; margin-left: 80px;margin-top: 10px;">
+                <p style="margin-top: 8px;float: left;margin-left: 14px; font-size: 19px;color: white; ">搜全网</p>
+            </div>
+        </div>
+        <div class="a3">
+            <p style="float: left;margin-left:340px ; color: red;font-size: 12px; margin-top: 2px;font-weight: 700;width: 150px;height: 27px;">
+                洗发护发&nbsp | &nbsp日本纸尿裤&nbsp |&nbsp</p>
+            <p style="float: left;margin-left:0px ;font-size: 12px; margin-top: 2px;font-weight: 700; ">身体乳&nbsp |
+                &nbsp内衣文胸&nbsp |&nbsp
+                iphons 6 &nbsp |&nbsp ipad Air2 &nbsp |&nbsp ipad &nbsp |&nbsp 牛仔裤 &nbsp |&nbsp 奶粉&nbsp |&nbsp防晒霜&nbsp
+                |&nbsp伞</p>
+        </div>
+    </div>
+</div>
+<div class="b1">
+    <div class="b2">
+        <p style="margin-left: 32px;height: 16px;font-size: 13px;font-weight: 700; color: white;">首页</p>
+    </div>
+    <p style="margin-left: 40px;font-size: 13px;font-weight: 700; color: white;float: left;">热门品牌</p>
+    <p style="margin-left: 80px;font-size: 13px;font-weight: 700; color: white;float: left;">美妆个户</p>
+    <p style="margin-left: 80px;font-size: 13px;font-weight: 700; color: white;float: left;">服饰鞋包</p>
+    <p style="margin-left: 80px;font-size: 13px;font-weight: 700; color: white;float: left;">母婴生活</p>
+    <p style="margin-left: 80px;font-size: 13px;font-weight: 700; color: white;float: left;">食品保健</p>
+    <p style="margin-left: 80px;font-size: 13px;font-weight: 700; color: white;float: left;">韩国直邮</p>
+    <p style="margin-left: 80px;font-size: 13px;font-weight: 700; color: white;float: left;"> 跨境购</p>
+    <img style="float: left;margin-left: 30px;" src="./img/ff_03.jpg">
+</div>
+<div class="c1">
+    <div class="c2">
+        <div class="d2">
+            <p style="float:left;font-size: 14px; color:#676660;margin-top: 10px;margin-left: 85px;;">
+                首页>美容护肤/美体/精油>防晒>韩国 RE:CIPE 水晶清爽防水防晒 SPF50 150ml/瓶</p>
+            <div class="h1">
+                <div style="width: 1000px;height: 640px;background-color: white;margin-left: 70px;">
+                    <div id="sancel" style="display: block">
+                        <div id="line">
+                            <div id="click1" style="display: block"><img src="img/pp0.jpeg" alt=" "></div>
+
+                            <p id="backcolorgrey"></p>
+                        </div>
+                        <div id="contain">
+                            <div id="click1" style="display: block"><img src="img/pp0.jpeg" alt=" "></div>
+
+                        </div>
+                        <div style="z-index: 0;float: left;width: 550px;height: 490px;">
+                            <p style="font-size: 15px;height: 18px;margin-left: 25px;margin-top: 0px;">韩国 RE:CIPE
+                                水晶清爽防水防晒喷雾SPF50 150ml/瓶</p>
+                            <p style="font-size: 13px;height: 13px;color: #676660;margin-left: 25px;line-height: 15px;">
+                                【限购三件】超透明无痕防晒，防水防汗定妆，保湿降温不粘腻。水晶防晒喷雾，喷后皮</p>
+                            <p style="font-size: 13px;height: 13px;color: grey;margin-left: 25px;line-height: 15px;">
+                                肤水润，不油，不留白，更不会像防晒霜那样抹不开，非常实用，开始存货吧。</p>
+                            <p style="height: 50px;margin-left: 5px;">
+                                <img src="./img/789123.png">
+                            </p>
+                            <p style="height: 102px;margin-left: 5px;">
+                                <img src="img/ss_09.jpg">
+                            </p>
+                            <div class="ann" >
+                                <p class="ann1" style="width: 90px;font-size: 13px;height: 100px;margin-left: 20px;float: left;">
+                                    化妆品净含量</p>
+                                <p id="m"
+                                   style="margin-top: 0px;width: 65px;height: 33px;float: left;font-size: 13px;line-height: 33px;text-align: center;">
+                                    150ml</p>
+                                <p id="n"
+                                   style="margin-top: 0px;width: 65px;height: 33px;line-height: 33px; float: left;font-size: 13px;margin-left: 2px;text-align: center;">
+                                    200ml</p>
+                            </div>
+
+                            <div style="width: 500px;height: 50px;background-color: white;">
+                                <span style="width: 30px;height: 32px;float: left;font-size: 13px;line-height: 32px;margin-left: -210px;">数量</span>
+                                <input id="block2" type="button" name="" value="-"
+                                       style="width: 30px;height: 32px;line-height: 32px;text-align: center;border: 1px grey solid;float: left;background-color: white;margin-left: -120px;">
+                                <input id="block1" value="1" type="text" name=""
+                                       style="width: 60px;height: 28px;border: 1px grey solid;float: left;text-align: center;margin-left: -90px">
+                                <input id="add" onclick="c()" type="button" name="" value="+"
+                                       style="width: 30px;height: 32px;line-height: 32px;text-align: center;border: 1px grey solid;float: left;background-color: white;margin-left: -30px;">
+                                <span style="width: 50px;height: 32px;line-height: 32px;font-size: 13px;margin-left: 20px;">件(库存5件)</span>
+                            </div>
+
+                            <div style="width: 410px;height: 47px;background: url(img/oo_03.jpg) no-repeat 0px;">
+
+                            </div>
+
+                            <div style="width: 60px;height: 40px;font-size: 13px;float: left;margin-left: 50px;margin-top: -10px;line-height: 40px;">
+                                您已选择
+                            </div>
+                            <div id="ml3" style="width: 200px;height: 40px;margin-top: -10px;float: left;">
+
+                            </div>
+                            <div style="width: 420px;height: 35px;">
+                                <div style="width: 150px;height: 30px;font-size: 16px;text-align: center;line-height: 30px;border-radius: 5px;border: 1px red solid;float: left;margin-left: 20px;">
+                                    <a href="" style="text-decoration: none;color: #FF0754">
+                                        立即购买
+                                    </a>
+                                </div>
+                                <div id="shop" onclick="f10()"
+                                     style="width: 150px;height: 30px;font-size: 16px;text-align: center;line-height: 30px;border-radius: 5px;border: 1px red solid;float: left;background-color: #FF0754;margin-left: 20px;color: white">
+                                    加入购物车
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img src="img/spanl.jpg">
+                        <img id="lcns" src="img/sp0.jpeg">
+                        <img id="lcns2" src="img/sp1.jpeg">
+                        <img src="img/spanr.jpg" style="margin-left: 250px;">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="c3">
+            <p style="float: left; margin-top: 20px; font-size: 12px; color:#676660;margin-left: 15px; width: 54px;">
+                看了又看</p>
+            <img style="float: left; margin-left: 144px;margin-top: -35px;" src="./img/abc4.png">
+            <img style="float: left;" src="./img/abc1.png">
+            <p style="float: left; margin-top: 20px; font-size: 12px; color:#676660;margin-left: 77px; width: 54px;">
+                ¥124</p>
+            <img style="float: left;" src="./img/abc2.png">
+            <p style="float: left; margin-top: 20px; font-size: 12px; color:#676660;margin-left: 77px; width: 54px;">
+                ¥29</p>
+            <img style="float: left;" src="./img/abc3.png">
+        </div>
+    </div>
+    <div class="d1">
+        <img src="./img/c1.png">
+    </div>
+    <div class="end">
+        <img style="float:left;width:146px;height:186px;margin-left: 85px;margin-top: 0px;" src="./img/loginB.jpg">
+        <div style="width: 860px;height: 180px;float:left;">
+            <p style="float:left;margin-top: 20px;margin-left: 85px; font-size: 18px;">购物指南&nbsp &nbsp&nbsp&nbsp &nbsp
+                &nbsp&nbsp &nbsp支付相关
+                &nbsp &nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp售后服务&nbsp &nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp vip服务&nbsp
+                &nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp
+                帮韩品&nbsp &nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp更多 </p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 85px;width:65px;height: 23px;">
+                如何下单</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 75px;width:65px;height: 23px;">
+                支付方式</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 75px;width:65px;height: 23px;">
+                取消订单</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 75px;width:65px;height: 23px;">
+                vip优惠</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 65px;width:65px;height: 23px;">
+                韩国正品</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 55px;width:65px;height: 23px;">
+                手机App</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 85px;width:75px;height: 23px;">
+                帮五购流程</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 70px;width:65px;height: 23px;">
+                安全设置</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 70px;width:65px;height: 23px;">
+                申请售后</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 73px;width:75px;height: 23px;">
+                如何成为vip</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 60px;width:65px;height: 23px;">
+                闪电发货</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 50px;width:75px;height: 23px;">
+                帮五采App</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 85px;width:65px;height: 23px;">
+                订单查询</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 75px;width:65px;height: 23px;">
+                账户信息</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 75px;width:65px;height: 23px;">
+                退货流程</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 75px;width:65px;height: 23px;">
+                超级帮钻</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 65px;width:75px;height: 23px;">
+                棒韩品售后</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 43px;width:65px;height: 23px;">
+                帮五淘插件</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 85px;width:65px;height: 23px;">
+                物流配送</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 215px;width:65px;height: 23px;">
+                退款相关</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 325px;width:65px;height: 23px;">
+                其他</p>
+        </div>
+        <img style="float: left;margin-top: 20px;" src="./img/erweima.jpg">
+        <div style="height: 160px;width: 1330px;float:left;">
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 20px;margin-left:345px;">关于帮五买&nbsp &nbsp |
+                &nbsp &nbsp联系我们
+                &nbsp &nbsp | &nbsp &nbsp合作商家&nbsp &nbsp | &nbsp &nbsp友情链接&nbsp &nbsp | &nbsp &nbsp加入我们&nbsp &nbsp |
+                &nbsp &nbsp移动应用
+                &nbsp &nbsp | &nbsp &nbsp热门&nbsp &nbsp | &nbsp &nbsp广告联盟&nbsp &nbsp | &nbsp &nbsp使用条款</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left:450px;">Copyright ©
+                2011-2015 B5M.COM All rights reserved.
+                Powered by B5Msoft Co Ltd</p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left:140px;">
+                增值电信业务经营许可证： 沪B2-20130065号中华人民共和国互联网药品信息服务资格证书 (沪) -非经营性-2013-0034 沪卫(中医)网审【2015】 10032号 沪ICP备 11034776
+                号-3 |食品流通许可证：
+            </p>
+            <p style="float:left;font-size: 12px; color:#676660;margin-top: 0px;margin-left: 610px;height: 23px; width: 500px;">
+                sp 3101151410301755</p>
+            <div style="float:left;width: 800px;height: 61px;margin-left: 290px">
+                <img style="float:left; margin-left:0px;" src="./img/bo1.gif">
+                <img style="float:left; margin-bottom: 1px;" src="./img/bo2.png">
+                <img style="float:left;margin-bottom: 1px;" src="./img/bo3.gif">
+                <img style="float:left;margin-bottom: 1px;" src="./img/bo4.png">
+                <img style="float:left;margin-bottom: 1px;" src="./img/bo5.png">
+                <img style="float:left;margin-bottom: 1px;" src="./img/bo6.png">
+                <img style="float:left;margin-bottom: 1px;" src="./img/bo7.png">
+            </div>
+        </div>
+    </div>
+    <script>
+        function my$(id) {
+            return document.getElementById(id);
+        }
+        window.onload = function () {
+            var cover = document.getElementsByClassName('box1')[0];
+            window.onscroll = function () {
+                var st = document.documentElement.scrollTop || document.body.scrollTop;
+                if (st > 120) {
+                    cover.style.position = "fixed";
+                } else {
+                    cover.style.position = "static";
+                }
+            }
+        };
+        function SET(obj) {
+            var ofL = 0, ofT = 0;
+            while (obj) {
+                ofL += obj.offsetLeft + obj.clientLeft;
+                ofT += obj.offsetTop + obj.clientTop;
+                obj = obj.offsetParent;
+            }
+            return {left: ofL, top: ofT};
+        }
+        function f10() {
+            document.body.innerHTML += '<div id="s1">' + '<div id="shopboder" >' + '<div id="chuwubox" onclick="history.go(0)" >' +
+                '<a href="test.html" id="nnn13">' + "x" + '</a>' +
+                '</div>' + '<img src="img/rr11_02.jpg">' + '</div>'
+                + '<div id="plcen" onclick="f()">' + '<a href="test.html"  id="nnn12">' + "继续购物" +
+                '</a>' + '</div>' + '<div id="tag10" onclick="f()">' + '<a id="nnn1" href="test.html">'
+                + "加入购物车" + '</a>' + '</div>' + '</div>';
+        }
+        my$("line").onmousemove = function (e) {
+            var e = e || window.event;
+            my$("backcolorgrey").style.display = 'block';
+            my$("contain").style.display = 'block';
+            var temp3 = e.clientX - SET(my$("line")).left - my$("backcolorgrey").clientWidth / 2;
+            var temp4 = e.clientY - SET(my$("line")).top - my$("backcolorgrey").clientHeight / 2;
+            if (document.body.scrollTop > 0) {
+                if ((e.clientX - SET(my$("line")).left - my$("backcolorgrey").clientWidth / 2) <= 0) {
+                    temp3 = 0;
+                }
+                else if (temp3 >= my$("line").clientWidth - my$("backcolorgrey").clientWidth) {
+                    temp3 = my$("line").clientWidth - my$("backcolorgrey").clientWidth;
+                }
+                if (temp4 <= -document.body.scrollTop) {
+                    temp4 = -document.body.scrollTop;
+                }
+                else if (temp4 >= my$("line").clientHeight - my$("backcolorgrey").clientHeight - document.body.scrollTop) {
+                    temp4 = my$("line").clientHeight - my$("backcolorgrey").clientHeight - document.body.scrollTop;
+                }
+                my$("backcolorgrey").style.top = temp4 + document.body.scrollTop + 'px';
+            } else {
+                if (temp3 <= 0) {
+                    temp3 = 0;
+                } else if (temp3 >= my$("line").clientWidth - my$("backcolorgrey").clientWidth) {
+                    temp3 = my$("line").clientWidth - my$("backcolorgrey").clientWidth;
+                }
+                if (temp4 <= 0) {
+                    temp4 = 0;
+                } else if (temp4 >= my$("line").clientHeight - my$("backcolorgrey").clientHeight) {
+                    temp4 = my$("line").clientHeight - my$("backcolorgrey").clientHeight;
+                }
+                my$("backcolorgrey").style.top = temp4 + 'px';
+            }
+            my$("backcolorgrey").style.left = temp3 + 'px';
+            my$("contain").getElementsByTagName('img')[0].style.left = -parseInt(my$("backcolorgrey").style.left) / (my$("contain").getElementsByTagName('img')[0].clientWidth / my$("line").getElementsByTagName('img')[0].clientWidth) + 'px';
+            my$("contain").getElementsByTagName('img')[0].style.top = -parseInt(my$("backcolorgrey").style.top) / (my$("contain").getElementsByTagName('img')[0].clientWidth / my$("line").getElementsByTagName('img')[0].clientWidth) + 'px';
+        };
+        my$("lcns").style.border = "2px solid orange";
+        my$("lcns").onclick = function () {
+            my$("click1").style.display = 'block';
+            var min = document.getElementById("contain");
+            min.children[0].children[0].src = "img/pp0.jpeg"
+            my$("click1").children[0].src = "img/pp0.jpeg"
+            my$("lcns").style.border = "1px solid orange";
+            my$("lcns2").style.border = "1px solid white";
+        };
+        my$("lcns2").onclick = function () {
+            var max = document.getElementById("contain");
+            my$("click1").children[0].src = "img/pp1.jpeg"
+            max.children[0].children[0].src = "img/pp1.jpeg"
+            my$("lcns2").style.border = "1px solid orange";
+            my$("lcns").style.border = "1px solid white";
+        };
+        my$("line").onmouseout = function () {
+            my$("backcolorgrey").style.display = 'none';
+            my$("contain").style.display = 'none';
+        };
+        my$("m").onclick = function () {
+            my$("m").style.border = "1px solid #ff0754";
+            my$("m").style.background = "url(img/duigou.png) no-repeat 52px 21px";
+            document.getElementById('ml3').innerHTML = '<p class="h2">' + '"150ml"' + '</p>';
+            my$("n").style.border = "none";
+            my$("n").style.background = "none";
+        };
+        my$("n").onclick = function () {
+            my$("n").style.border = "1px solid #ff0754";
+            my$("m").style.border = "none";
+            my$("m").style.background = "none";
+            my$("n").style.background = "url(img/duigou.png) no-repeat 52px 21px";
+            document.getElementById('ml3').innerHTML = '<p style="color: orange;font-size: 14px;height:40px;position:absolute;line-height:15px;">'
+                + '"200ml"' + '</p>';
+        };
+        my$("block2").onclick = function () {
+            my$("block1").value--;
+            if (my$("block1").value <= 1) {
+                my$("block2").style.cursor = 'not-allowed';
+                my$("block1").value=0;
+            }
+        };
+        function c() {
+            my$("block1").value++;
+            if (my$("block1").value >= 5) {
+                my$("block1").value=5;
+                my$("add").style.cursor = 'not-allowed';
+            }
+        }
+    </script>
+</body>
+</html>
